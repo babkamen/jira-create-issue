@@ -13,7 +13,7 @@ public class Main {
         String body= convertStreamToString(inputStream);
         System.out.println("Body="+body);
         HttpResponse<JsonNode> response = Unirest.get("https://XXX.atlassian.net/rest/api/2/issue")
-                .basicAuth("XXX", "XXX")
+                .basicAuth("username", "password")
                .header("content-type", "application/json")
                .body(body)
                 .asJson();
